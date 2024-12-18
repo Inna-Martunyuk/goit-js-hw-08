@@ -63,7 +63,7 @@ const images = [
     description: "Lighthouse Coast Sea",
   },
 ];
-
+// За допомогою шаблоного рядка створюємо HTML розмітку для кожного зображення
 const imageCardTemplate = (image) => {
   return `<li class="gallery-item">
       <a class="gallery-link" href="${image.original}">
@@ -96,9 +96,9 @@ imageListEl.addEventListener("click", (event) => {
   const largeImage = clickedImage.dataset.source;
 
   // Відображаємо зображення у модальному вікні
-  const modalWindowInstance = basicLightbox.create(`
-    <img src="${largeImage}" width="800" height="600">
-  `);
+  const modalWindowInstance = basicLightbox.create(
+    `<img src="${largeImage}" width="800" height="600">`
+  );
 
   modalWindowInstance.show();
 });
